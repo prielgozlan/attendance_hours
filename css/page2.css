@@ -12,4 +12,10 @@ h1{
     border-radius: 15%;
     background: aqua;
     padding: 20px;
+    cursor: pointer;
+}
+.box_b1{
+    background: rgb(185, 225, 225);
+    border-radius: 15%;
+    cursor: pointer;
 }
