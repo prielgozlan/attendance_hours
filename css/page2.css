@@ -1,21 +1,27 @@
+body{
+    background: rgb(81, 81, 77);
+}
 h1{
     text-align: center;
     font-size: 50px;
 }
 .box1{
     text-align: center;
-    
-    
+    border: 2px solid red;
 }
 .box_b{
     font-size: 50px;
     border-radius: 15%;
-    background: aqua;
+    background: rgb(194, 199, 199);
     padding: 20px;
     cursor: pointer;
 }
 .box_b1{
-    background: rgb(185, 225, 225);
+    background: rgb(194, 199, 199);
     border-radius: 15%;
     cursor: pointer;
+}
+.box2{
+    text-align: center;
+    border: 2px solid red;
 }

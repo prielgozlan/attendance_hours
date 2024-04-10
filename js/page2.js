@@ -38,14 +38,14 @@ function refresh(){
     pr.innerHTML = ""
     
     for (let i = 0; i < list_date.length; i++) {
-        pr.innerHTML += `${list_date[i]} ${list_h1[i]}.${list_n1[i]} <button id="id_b2" class="box_b1">שינוי כניסה</button>`
-        if (list_h2[i] == undefined){
-            pr.innerHTML += ""
+        pr.innerHTML += `${list_date[i]} ${list_h1[i]}.${list_n1[i]} <button id="s${i}" class="box_b1" onclick="chengeBtnS(${i})">שינוי כניסה</button>`
+        if (list_date2[i] == undefined){
+            pr.innerHTML += ` <br>`
         }
-        else{
-            let sum_time_h = list_h2 - list_h1
-            let sum_time_n = list_n2 - list_n1
-            pr.innerHTML += ` ${list_h2[i]}.${list_n2[i]} <button id="id_b2" class="box_b1">שינוי יציאה</button> סה"כ שעות: ${sum_time_h} סה"כ דקות: ${sum_time_n}`
+        else if (list_date2[i] != undefined){
+            let sum_time_h = list_h2[i] - list_h1[i];
+            let sum_time_n = list_n2[i] - list_n1[i];
+            pr.innerHTML += ` ${list_h2[i]}.${list_n2[i]} <button id="e${i}" class="box_b1" onclick="chengeBtnE(${i})">שינוי יציאה</button> סה"כ שעות: ${sum_time_h} סה"כ דקות: ${sum_time_n}<br>`
         }
         
     }
@@ -56,8 +56,8 @@ btn_2.addEventListener("click", appendEventt2);
 
 function appendEvent1() {
     let date = new Date()
-    if (list_date.includes(`${date.getDate()}/${date.getMonth()}`) == false) {
-        // let all_data1 = `${date.getDate()}/${date.getMonth() + 1}    ${date.getHours()}.${date.getMinutes()}    <button id="id_b2" class="box_b1">שינוי כניסה</button>`
+    // list_date.includes(`${date.getDate()}/${date.getMonth()}`) == false
+    if (true) {
         list_date.push(`${date.getDate()}/${date.getMonth()}`)
         list_h1.push(date.getHours())
         list_n1.push(date.getMinutes())
@@ -72,9 +72,8 @@ function appendEvent1() {
 }
 function appendEventt2() {
     let date = new Date()
-    if (list_date2.includes(`${date.getDate()}/${date.getMonth()}`) == false) {
-        // let all_data3 = ` ${date.getHours()}.${date.getMinutes()}  <button id="id_b2" class="box_b1">שינוי יציאה</button>
-        // <h2 id="id_p"></h2><br> `
+    // list_date2.includes(`${date.getDate()}/${date.getMonth()}`) == false
+    if (true) {
         list_date2.push(`${date.getDate()}/${date.getMonth()}`)
         list_h2.push(date.getHours())
         list_n2.push(date.getMinutes())
@@ -89,5 +88,25 @@ function appendEventt2() {
 
 
 
+
+}
+function chengeBtnS(b){
+    let date = new Date()
+    list_h1[b] = date.getHours()
+    list_n1[b] = date.getMinutes()
+
+    localStorage.setItem("list_h1", JSON.stringify(list_h1))
+    localStorage.setItem("list_n1", JSON.stringify(list_n1))
+    refresh()
+
+}
+function chengeBtnE(b){
+    let date = new Date()
+    list_h2[b] = date.getHours()
+    list_n2[b] = date.getMinutes()
+
+    localStorage.setItem("list_h2", JSON.stringify(list_h2))
+    localStorage.setItem("list_n2", JSON.stringify(list_n2))
+    refresh()
 
 }
