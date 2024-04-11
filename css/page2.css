@@ -1,22 +1,22 @@
-body{
+.box{
     background: rgb(81, 81, 77);
 }
 h1{
     text-align: center;
     font-size: 50px;
+    
 }
 .box1{
+    border: 2px solid red;
     text-align: center;
 }
 .box_b{
     font-size: 50px;
     border-radius: 15%;
-    background: rgb(194, 199, 199);
     padding: 20px;
     cursor: pointer;
 }
 .box_b1{
-    background: rgb(194, 199, 199);
     border-radius: 15%;
     cursor: pointer;
 }
@@ -25,8 +25,18 @@ h1{
     border: 2px solid red;
 }
 #id_input1{
-    font-size: 20px;
+    font-size: 35px;
 }
 #id_of_input{
     color: red;
+}
+.box3{
+    text-align: center;
+    border:2px solid red;
+}
+#id_commen_in{
+    font-size: 30px;
+}
+.box_b_c{
+    font-size: 30px;
 }

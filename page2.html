@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/page2.css">
+    <link rel="stylesheet" href="bootstrap.min/bootstrap.min.css">
 </head>
-<body>
-    <h1>נוכחות</h1>
-    <div class="box1">
-        <button id="id_b1" class="box_b">כניסה</button>
-        <button id="id_b2" class="box_b">יציאה</button>
-        <h2 id="id_p"></h2>
-        <h2 id="id_sum_hours"></h2>
-        <h2>חישוב לפי שכר שעתי</h2>
-        <input placeholder="הכנס סכום לקבל לםי שעה" id="id_input1" type="number">
-        <h2>סכום שנצבר עד כה:<span id="id_of_input"></span></h2>
-    </div>
-    <div class="box2">
-        <h2>הערות</h2>
-        <input type="text">
 
+<body class="box">
+    <h1>נוכחות</h1>
+    <br>
+    <br>
+    <div>
+        <div class="box1">
+            <button id="id_b1" class="box_b">כניסה</button>
+            <button id="id_b2" class="box_b">יציאה</button>
+            <br>
+            <br>
+            <h2 id="id_p"></h2>
+            <br>
+            <br>
+            <h2 id="id_sum_hours"></h2>
+        </div>
+        <div class="box2">
+            <h2>הערות</h2>
+            <input id="id_commen_in" type="text" placeholder="הכנס הערה">
+            <button id="id_but_commen" class="box_b_c">אישור</button>
+            <h2 id="id_commen_h2"></h2>
+
+        </div>
     </div>
+    <div class="box3">
+        <h2>חישוב לפי שכר שעתי</h2>
+            <input placeholder="הכנס סכום לקבל לפי שעה" id="id_input1" type="number">
+            <h2>סכום שנצבר עד כה:<span id="id_of_input"></span></h2>
+    </div>
+
 
 
 
 
     <script src="js/page2.js"></script>
 </body>
+
 </html>
