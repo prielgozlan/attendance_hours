@@ -7,7 +7,7 @@ h1{
     
 }
 .box1{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
 }
 .box_b{
@@ -22,7 +22,7 @@ h1{
 }
 .box2{
     text-align: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 #id_input1{
     font-size: 35px;
@@ -32,7 +32,6 @@ h1{
 }
 .box3{
     text-align: center;
-    border:2px solid red;
 }
 #id_commen_in{
     font-size: 30px;
